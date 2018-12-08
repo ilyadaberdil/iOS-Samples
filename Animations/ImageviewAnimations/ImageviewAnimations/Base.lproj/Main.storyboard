@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageviewAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-0" translatesAutoresizingMaskIntoConstraints="NO" id="o5Q-Ru-wR9">
+                                <rect key="frame" x="87.5" y="51" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="HUF-SI-11F"/>
+                                    <constraint firstAttribute="height" constant="200" id="ntq-XR-Ykf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzM-9e-180">
+                                <rect key="frame" x="119" y="558" width="137" height="30"/>
+                                <state key="normal" title="Start Ryu Animation"/>
+                                <connections>
+                                    <action selector="startRyuAnimTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kJi-QA-grN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryu-0" translatesAutoresizingMaskIntoConstraints="NO" id="2B4-pd-RLz">
+                                <rect key="frame" x="87.5" y="340" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GC1-5r-shC"/>
+                                    <constraint firstAttribute="width" constant="200" id="GnG-AT-9yE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzx-Qq-SNf">
+                                <rect key="frame" x="113" y="288" width="149" height="30"/>
+                                <state key="normal" title="Start Heart Animation"/>
+                                <connections>
+                                    <action selector="startHeartAnimTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXn-zc-s1e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2B4-pd-RLz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5sl-op-whk"/>
+                            <constraint firstItem="bzM-9e-180" firstAttribute="top" secondItem="2B4-pd-RLz" secondAttribute="bottom" constant="18" id="85l-GP-w7s"/>
+                            <constraint firstItem="o5Q-Ru-wR9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ehi-7a-9r4"/>
+                            <constraint firstItem="bzM-9e-180" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MBR-31-hs0"/>
+                            <constraint firstItem="Tzx-Qq-SNf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RAa-80-Vmg"/>
+                            <constraint firstItem="Tzx-Qq-SNf" firstAttribute="top" secondItem="o5Q-Ru-wR9" secondAttribute="bottom" constant="37" id="RiW-th-0ZF"/>
+                            <constraint firstItem="2B4-pd-RLz" firstAttribute="top" secondItem="Tzx-Qq-SNf" secondAttribute="bottom" constant="22" id="US3-6L-Pga"/>
+                            <constraint firstItem="o5Q-Ru-wR9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="jV8-LF-uHO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="heartImageView" destination="o5Q-Ru-wR9" id="Ehk-As-to2"/>
+                        <outlet property="ryuImageView" destination="2B4-pd-RLz" id="dIT-R1-0q9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart-0" width="100" height="100"/>
+        <image name="ryu-0" width="80" height="150"/>
+    </resources>
+</document>
