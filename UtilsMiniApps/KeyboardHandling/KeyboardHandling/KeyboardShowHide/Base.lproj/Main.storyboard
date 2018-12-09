@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx3-sx-ono">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx3-sx-ono">
                                 <rect key="frame" x="0.0" y="20" width="375" height="516"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fa7-c6-caD">
@@ -31,7 +31,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="MtV-Na-AXI">
-                                                <rect key="frame" x="16" y="55" width="343" height="384"/>
+                                                <rect key="frame" x="16" y="20" width="343" height="384"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="deneme" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0b-am-loK">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -76,6 +76,9 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="384" id="2lq-Sx-JDP"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,9 +86,9 @@
                                             <constraint firstItem="MtV-Na-AXI" firstAttribute="leading" secondItem="fa7-c6-caD" secondAttribute="leading" constant="16" id="2hV-iU-Uei"/>
                                             <constraint firstItem="VjE-11-IEc" firstAttribute="centerX" secondItem="fa7-c6-caD" secondAttribute="centerX" id="6a4-XO-zar"/>
                                             <constraint firstAttribute="trailing" secondItem="MtV-Na-AXI" secondAttribute="trailing" constant="16" id="LfS-1Q-pXd"/>
+                                            <constraint firstItem="VjE-11-IEc" firstAttribute="top" secondItem="MtV-Na-AXI" secondAttribute="bottom" constant="62" id="VDH-Df-6ea"/>
                                             <constraint firstItem="MtV-Na-AXI" firstAttribute="centerX" secondItem="fa7-c6-caD" secondAttribute="centerX" id="fXl-cz-1E9"/>
-                                            <constraint firstAttribute="bottom" secondItem="VjE-11-IEc" secondAttribute="bottom" constant="20" id="rmb-r9-ZzC"/>
-                                            <constraint firstItem="VjE-11-IEc" firstAttribute="top" secondItem="MtV-Na-AXI" secondAttribute="bottom" constant="27" id="tZ7-x5-qEC"/>
+                                            <constraint firstAttribute="bottom" secondItem="VjE-11-IEc" secondAttribute="bottom" constant="20" id="tfo-Zp-Upj"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -95,7 +98,7 @@
                                     <constraint firstItem="fa7-c6-caD" firstAttribute="top" secondItem="dx3-sx-ono" secondAttribute="top" id="Tp7-oo-Tu5"/>
                                     <constraint firstItem="fa7-c6-caD" firstAttribute="centerX" secondItem="dx3-sx-ono" secondAttribute="centerX" id="YQl-tu-iOF"/>
                                     <constraint firstAttribute="trailing" secondItem="fa7-c6-caD" secondAttribute="trailing" id="uEf-CB-qXg"/>
-                                    <constraint firstAttribute="height" secondItem="fa7-c6-caD" secondAttribute="height" id="uPp-A7-OqE"/>
+                                    <constraint firstItem="MtV-Na-AXI" firstAttribute="top" secondItem="dx3-sx-ono" secondAttribute="top" constant="20" id="vsQ-rd-lYH"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHe-06-sVW">

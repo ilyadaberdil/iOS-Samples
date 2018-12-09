@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         print(textField.text)
+        view.endEditing(true)
     }
     
     
@@ -69,7 +70,7 @@ extension ViewController:UITextFieldDelegate {
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
+      //  tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
