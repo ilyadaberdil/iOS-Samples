@@ -11,7 +11,7 @@
 ## UtilMiniApps:
 - KeyboardHandling
 
-## TableViewLazyLoading:
+## TableViewLazyLoading:
 - Lazy Loading for TableView When Scroll to Bottom
 - Update Data When Scroll to Top
 - SecurityView When App Moves to the Background
