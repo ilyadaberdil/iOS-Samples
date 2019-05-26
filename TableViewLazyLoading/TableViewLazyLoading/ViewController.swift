@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: Outlets
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -27,13 +28,22 @@ class ViewController: UIViewController {
             tableView.sectionHeaderHeight = UITableView.automaticDimension
             tableView.estimatedRowHeight = 50
             tableView.rowHeight = UITableView.automaticDimension
+            
+            refreshControl.tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
+            refreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh!!")
+            
+            refreshControl.addTarget(self, action: #selector(updateData), for: .valueChanged)
+            tableView.refreshControl = refreshControl
         }
     }
+
     
     // MARK: Variables-Constants
+    private var refreshControl = UIRefreshControl()
+  
     var myList: [String] = [] //sample data
     let sectionList: [SectionType] = [
-        .indicatorSection, //for update data
+       // .indicatorSection, //for update data -- Alternative for RefreshControl
         .sampleDataSection, //for sample data
         .indicatorSection] //for load more data
     
@@ -64,14 +74,15 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateData() {
+    @objc func updateData() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.myList = self.myList.map({ (text) -> String in
                 guard let index = self.myList.firstIndex(of: text) else { return ""}
                 return "Updated Sample Item \(index + 1)"
             })
-            self.shouldUpdate = false
+           // self.shouldUpdate = false -- Alternative for RefreshControl
             self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
     
@@ -136,13 +147,13 @@ extension ViewController: UIScrollViewDelegate {
             }
         }
         
-        // update data
-        if offSetY < -100 {
-            if !shouldUpdate {
-                shouldUpdate = true
-                tableView.reloadData()
-                updateData()
-            }
-        }
+        // update data -- Alternative for UIRefreshControl
+//        if offSetY < -100 {
+//            if !shouldUpdate {
+//                shouldUpdate = true
+//                tableView.reloadData()
+//                updateData()
+//            }
+//        }
     }
 }
