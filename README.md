@@ -17,5 +17,6 @@
 
 ## TableViewLazyLoading:
 - Lazy Loading for TableView When Scroll to Bottom
-- Update Data When Scroll to Top
+- Update Data When Scroll to Top - Alternative For UIRefreshControl
+- RefreshControl Usage
 - SecurityView When App Moves to the Background
