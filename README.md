@@ -8,6 +8,10 @@
 - UserDefaults Usage Sample App
 - AutoResizing TableView
 
+## Local Notifications:
+- Local Notification and Notification Actions Usage
+- Sample UIButton Extension for Changing Background Color When Tapped.
+
 ## UtilMiniApps:
 - KeyboardHandling
 
